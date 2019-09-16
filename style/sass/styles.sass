@@ -1,0 +1,34 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    outline: none
+
+//colors 
+$green: #65eb7b
+$darkGreen: #4ecc62
+$dark: #222422
+
+//mixins 
+=flexCenter()
+    display: flex 
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+
+body 
+    font-family: 'Roboto', sans-serif
+    color: $dark
+    overflow-x: hidden
+    h1, button 
+        text-transform: uppercase
+    button 
+        padding: 3px 5px
+        letter-spacing: 1px
+        cursor: pointer
+        transition: .2s
+    .main 
+        min-height: 300vh
+
+
+@import 'header'
