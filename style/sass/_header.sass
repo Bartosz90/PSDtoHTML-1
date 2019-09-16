@@ -1,8 +1,9 @@
 .header 
     width: 100vw
-    height: 100vh
+    height: 80vh
     margin-top: 10vh
     @media (max-width: 900px)
+        height: 90vh
         margin: 0
     .nav 
         position: fixed 
@@ -64,8 +65,9 @@
                 width: 100%
                 margin: 10px
                 text-align: center
-    .nav.active 
-        transform: translateX(-200px)
+    .nav.active
+        @media (max-width: 900px)
+            transform: translateX(-200px)
         .hamburger
             transform: translateX(-200px)
             .bars 
@@ -78,12 +80,14 @@
             
     .head 
         position: relative
-        height: 70vh
+        height: 80vh
         background-image: url("../../images/laptop-1478822_1920.jpg")
         background-attachment: fixed
         background-size: cover
         background-position: center
         +flexCenter()
+        @media (max-width: 900px)
+            height: 90vh
         h1, h3 
             width: 100%
             padding: 10px

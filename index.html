@@ -10,21 +10,26 @@
     />
     <link rel="stylesheet" href="style/css/styles.css" />
     <script src="https://kit.fontawesome.com/b8b3239479.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
     <title>PSDtoHTML#1</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header home">
       <nav class="nav">
         <button class="hamburger">
           <i class="fas fa-bars bars"></i>
           <i class="fas fa-times-circle close"></i>
         </button>
         <h1 class="companyName"><i class="fas fa-leaf"></i> treehouse</h1>
-        <button class="navBtn">home</button>
-        <button class="navBtn">about</button>
-        <button class="navBtn">blog</button>
-        <button class="navBtn">portfolio</button>
-        <button class="navBtn">contact</button>
+        <button class="navBtn" data-target="home">home</button>
+        <button class="navBtn" data-target="about">about</button>
+        <button class="navBtn" data-target="blog">blog</button>
+        <button class="navBtn" data-target="portfolio">portfolio</button>
+        <button class="navBtn" data-target="contact">contact</button>
       </nav>
       <section class="head">
         <h1>creative digital solutions</h1>
@@ -32,7 +37,42 @@
         <button class="headerBtn">view portfolio</button>
       </section>
     </header>
-    <main class="main"></main>
+    <main class="main">
+      <section class="mainSection about">
+        <h2>professional services</h2>
+        <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
+        <section class="profits">
+          <span class="img"><i class="far fa-heart"></i></span>
+          <h3>beautiful designs</h3>
+          <p>
+            Provident ab quae unde minus, repellat exercitationem amet nesciunt
+            tempore labore, porro maxime harum earum, error totam. Libero eaque
+            consequatur magni minus.
+          </p>
+        </section>
+        <section class="profits">
+          <span class="img"><i class="fas fa-tablet-alt"></i></span>
+          <h3>responsive web</h3>
+          <p>
+            Provident ab quae unde minus, repellat exercitationem amet nesciunt
+            tempore labore, porro maxime harum earum, error totam. Libero eaque
+            consequatur magni minus.
+          </p>
+        </section>
+        <section class="profits">
+          <span class="img"><i class="fas fa-comments-dollar"></i></span>
+          <h3>marketing tools</h3>
+          <p>
+            Provident ab quae unde minus, repellat exercitationem amet nesciunt
+            tempore labore, porro maxime harum earum, error totam. Libero eaque
+            consequatur magni minus.
+          </p>
+        </section>
+      </section>
+      <section class="mainSection blog"></section>
+      <section class="mainSection portfolio"></section>
+      <section class="mainSection contact"></section>
+    </main>
 
     <script src="scripts/script.js"></script>
   </body>
