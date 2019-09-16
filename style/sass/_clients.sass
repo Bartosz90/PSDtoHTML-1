@@ -1,0 +1,94 @@
+.clients 
+    +flexCenter()
+    padding: 20px 300px
+    overflow-x: hidden
+    @media (max-width: 900px)
+        padding: 15px
+    @media (max-width: 900px)
+        padding: 15px 5px
+    h2, p, .quote
+        width: 100% 
+        text-align: center
+    h2 
+        font-size: 45px
+        text-transform: uppercase
+        @media (max-width: 900px)
+            font-size: 35px
+    p 
+        color: gray 
+        font-size: 20px
+        @media (max-width: 900px)
+            font-size: 18px
+    .quote 
+        +flexCenter()
+        margin-top: 20px
+        .clientImage 
+            position: relative
+            height: 180px 
+            width: 180px 
+            border: 4px solid $dark 
+            border-radius: 50%
+            @media (max-width: 900px)
+                width: 120px 
+                height: 120px
+            @media (max-width: 375px)
+                width: 100px
+                height: 100px
+        .clientImage::after, .clientImage::before 
+            position: absolute
+            top: 50% 
+            transform: translateY(-50%)
+            background-color: #dcdedc
+            +flexCenter()
+            opacity: 0
+            transition: 1s
+        .clientImage::before 
+            content: "Veniam repudiandae quod deleniti natus ut, voluptas quae nisi et porro minus cumque, culpa aliquam. Quaerat nam ex, repudiandae libero aut suscipit. Veniam repudiandae quod deleniti natus ut, voluptas quae nisi et porro minus cumque, culpa aliquam. Quaerat nam ex, repudiandae libero aut suscipit."
+            border-radius: 8px
+            padding: 5px 
+            width: 500px
+            height: 80%
+            z-index: 1
+            @media (max-width: 900px)
+                width: 300px
+                content: "Veniam repudiandae quod deleniti natus ut, voluptas quae nisi et porro minus cumque, culpa aliquam. Quaerat nam ex, repudiandae libero aut suscipit."
+            @media (max-width: 450px)
+                width: 200px
+                content: "Veniam repudiandae quod deleniti natus ut, voluptas quae nisi et porro minus cumque, culpa aliquam."
+            
+        .clientImage::after 
+            content: ""
+            width: 30px 
+            height: 30px 
+            transform: translateY(-50%) rotate(45deg)
+    .quote1 
+        justify-content: flex-start
+    .quote1
+        .clientImage::before
+            right: -570px
+            @media (max-width: 900px)
+                right: -370px
+            @media (max-width: 450px)
+                right: -225px
+        .clientImage::after 
+            right: -80px
+            @media (max-width: 450px)
+                right: -40px
+    .quote2 
+        justify-content: flex-end
+        .clientImage::before
+            left: -570px
+            transition-delay: .5s
+            @media (max-width: 900px)
+                left: -370px
+            @media (max-width: 450px)
+                left: -225px
+        .clientImage::after 
+            left: -80px
+            transition-delay: .5s
+            @media (max-width: 450px)
+                left: -40px
+.clients.active 
+    .quote 
+        .clientImage::after, .clientImage::before
+            opacity: 1

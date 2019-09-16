@@ -38,13 +38,26 @@ const closeMenu = () => {
 //onscroll animations
 
 const about = document.querySelector(".about");
+const clients = document.querySelector(".clients");
 
 window.addEventListener("scroll", () => {
   if (
     window.scrollY >
-    about.offsetTop + about.offsetHeight - window.innerHeight + 50
+    about.offsetTop +
+      about.offsetHeight -
+      window.innerHeight +
+      (window.innerWidth > 900 ? 50 : -350)
   ) {
     about.classList.add("active");
+  }
+  if (
+    window.scrollY >
+    clients.offsetTop +
+      clients.offsetHeight -
+      window.innerHeight +
+      (window.innerWidth > 900 ? 50 : -250)
+  ) {
+    clients.classList.add("active");
   }
   // if (
   //   window.scrollY >
@@ -60,6 +73,7 @@ window.addEventListener("scroll", () => {
   // }
   if (window.scrollY < 100) {
     about.classList.remove("active");
+    clients.classList.remove("active");
     // offer.classList.remove("active");
     // contact.classList.remove("active");
   }
