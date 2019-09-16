@@ -25,7 +25,7 @@ menuBtns.forEach(btn => {
 $(".navBtn").on("click", function(e) {
   const goToSection = `.${e.target.dataset.target}`;
   $("body, html").animate({
-    scrollTop: $(goToSection).offset().top
+    scrollTop: $(goToSection).offset().top - (window.innerWidth < 900 ? 0 : 100)
   });
 });
 
@@ -42,7 +42,7 @@ const about = document.querySelector(".about");
 window.addEventListener("scroll", () => {
   if (
     window.scrollY >
-    about.offsetTop + about.offsetHeight - window.innerHeight + 150
+    about.offsetTop + about.offsetHeight - window.innerHeight + 50
   ) {
     about.classList.add("active");
   }
