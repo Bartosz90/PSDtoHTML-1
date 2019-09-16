@@ -1,0 +1,65 @@
+.values 
+    +flexCenter()
+    background-color: #dcdedc
+    padding: 20px
+    h2, h3, p, .valueIcon
+        width: 100% 
+        text-align: center
+    h2, h3 
+        text-transform: uppercase
+    h2 
+        font-size: 45px
+        @media (max-width: 900px)
+            font-size: 35px
+    h3 
+        font-size: 30px 
+        @media (max-width: 900px)
+            font-size: 22px
+    p 
+        margin-top: 10px
+        color: gray
+        font-size: 20px
+        @media (max-width: 900px)
+            font-size: 17px
+    .value 
+        width: 25%
+        @media (max-width: 900px)
+            width: 33%
+        @media (max-width: 450px)
+            width: 100%
+        +flexCenter()
+        .valueIcon 
+            position: relative
+            width: 100px
+            height: 100px
+            margin: 35px 0 20px 0
+            border: 4px solid $dark
+            border-radius: 50%
+            font-size: 40px
+            +flexCenter()
+            @media (max-width: 900px)
+                font-size: 25px 
+                height: 65px 
+                width: 65px
+        .valueIconMiddle::after, 
+        .valueIconMiddle::before, 
+            position: absolute
+            top: 50%
+            right: -20px
+            transform: translateY(-50%)
+            content: ""
+            height: 4px 
+            width: 200px
+            background-color: $dark
+            @media (max-width: 900px)
+                display: none
+        .valueIconMiddle::after
+            right: -240px
+        .valueIconMiddle::before
+            left: -240px
+        p 
+            padding: 0 40px
+            margin-top: 15px
+            @media (max-width: 900px)
+                padding: 0 5px
+    
