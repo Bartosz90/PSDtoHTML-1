@@ -22,6 +22,7 @@ body button {
   cursor: pointer;
   -webkit-transition: .2s;
   transition: .2s;
+  border: none;
 }
 
 body .main {
@@ -32,6 +33,12 @@ body .main {
   width: 100vw;
   height: 100vh;
   margin-top: 10vh;
+}
+
+@media (max-width: 900px) {
+  .header {
+    margin: 0;
+  }
 }
 
 .header .nav {
@@ -53,6 +60,62 @@ body .main {
       flex-wrap: wrap;
   background-color: #fff;
   z-index: 2;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+@media (max-width: 900px) {
+  .header .nav {
+    width: 200px;
+    left: auto;
+    right: -200px;
+    height: 100vh;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    padding: 10px;
+    border-left: 2px solid #65eb7b;
+  }
+}
+
+.header .nav .hamburger {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  padding: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: none;
+  background-color: transparent;
+  color: #65eb7b;
+  text-align: center;
+  font-size: 25px;
+}
+
+.header .nav .hamburger .bars, .header .nav .hamburger .close {
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.header .nav .hamburger .close {
+  display: none;
+  opacity: 0;
+}
+
+@media (max-width: 900px) {
+  .header .nav .hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .header .nav .companyName {
@@ -65,6 +128,12 @@ body .main {
   color: #65eb7b;
 }
 
+@media (max-width: 900px) {
+  .header .nav .companyName {
+    font-size: 20px;
+  }
+}
+
 .header .nav .navBtn {
   margin: 0 10px;
   background-color: transparent;
@@ -72,8 +141,44 @@ body .main {
   font-size: 20px;
 }
 
+@media (max-width: 900px) {
+  .header .nav .navBtn {
+    font-size: 15px;
+    border-bottom: 2px solid #65eb7b;
+    padding: 8px 0;
+  }
+}
+
 .header .nav .navBtn:hover {
   border-bottom: 2px solid #222422;
+}
+
+@media (max-width: 900px) {
+  .header .nav .companyName, .header .nav .navBtn {
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+  }
+}
+
+.header .nav.active {
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+}
+
+.header .nav.active .hamburger {
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+}
+
+.header .nav.active .hamburger .bars {
+  display: none;
+  opacity: 0;
+}
+
+.header .nav.active .hamburger .close {
+  display: block;
+  opacity: 1;
 }
 
 .header .head {
@@ -111,8 +216,20 @@ body .main {
   font-size: 60px;
 }
 
+@media (max-width: 900px) {
+  .header .head h1 {
+    font-size: 40px;
+  }
+}
+
 .header .head h3 {
   font-size: 25px;
+}
+
+@media (max-width: 900px) {
+  .header .head h3 {
+    font-size: 18px;
+  }
 }
 
 .header .head .headerBtn {
@@ -126,6 +243,12 @@ body .main {
 
 .header .head .headerBtn:hover {
   background-color: #4ecc62;
+}
+
+@media (max-width: 900px) {
+  .header .head .headerBtn {
+    font-size: 18px;
+  }
 }
 
 .header .head::before {
