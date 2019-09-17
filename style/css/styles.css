@@ -1322,3 +1322,130 @@ body .mainSection {
 .clients.active .quote .clientImage::after, .clients.active .quote .clientImage::before {
   opacity: 1;
 }
+
+.contact {
+  padding: 25px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #65eb7b;
+  color: #fff;
+}
+
+.contact h2, .contact button {
+  margin: 15px 0;
+}
+
+.contact h2 {
+  width: 100%;
+  font-size: 45px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .contact h2 {
+    font-size: 35px;
+  }
+}
+
+.contact button {
+  background-color: #65eb7b;
+  color: #fff;
+  font-size: 25px;
+  border: 4px solid #fff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  z-index: 1;
+}
+
+.contact button:hover {
+  background-color: #4ecc62;
+}
+
+@media (max-width: 900px) {
+  .contact button {
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.posts {
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  background-color: #222422;
+  color: #fff;
+}
+
+.posts .address, .posts .post, .posts .twitter {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .posts .address, .posts .post, .posts .twitter {
+    width: 100%;
+  }
+}
+
+.posts .address h3, .posts .address p, .posts .post h3, .posts .post p, .posts .twitter h3, .posts .twitter p {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.posts .address h3, .posts .post h3, .posts .twitter h3 {
+  position: relative;
+  padding-bottom: 12px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .posts .address p i, .posts .post p i, .posts .twitter p i {
+    margin-right: 20px;
+  }
+}
+
+.posts .address h3::after, .posts .post h3::after, .posts .twitter h3::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  content: "";
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: #fff;
+}
