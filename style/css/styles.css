@@ -1432,10 +1432,8 @@ body .mainSection {
   text-transform: uppercase;
 }
 
-@media (max-width: 900px) {
-  .posts .address p i, .posts .post p i, .posts .twitter p i {
-    margin-right: 20px;
-  }
+.posts .address p i, .posts .post p i, .posts .twitter p i {
+  margin-right: 20px;
 }
 
 .posts .address h3::after, .posts .post h3::after, .posts .twitter h3::after {
@@ -1448,4 +1446,141 @@ body .mainSection {
   width: 50%;
   height: 2px;
   background-color: #fff;
+}
+
+.footer {
+  width: 100vw;
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer .author {
+  width: 50%;
+  text-align: center;
+  font-size: 18px;
+  text-transform: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .footer .author {
+    width: 100%;
+  }
+}
+
+.footer .author a {
+  margin-left: 10px;
+  text-decoration: underline;
+  color: #222422;
+  -webkit-animation: shake 3s infinite;
+          animation: shake 3s infinite;
+}
+
+@-webkit-keyframes shake {
+  2% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  4% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  6% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  8% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  10% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes shake {
+  2% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  4% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  6% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  8% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  10% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.footer .socials {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 40px;
+}
+
+@media (max-width: 900px) {
+  .footer .socials {
+    font-size: 30px;
+    width: 100%;
+  }
+}
+
+.footer .socials a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #222422;
+}
+
+@media (max-width: 900px) {
+  .footer .socials a {
+    margin-top: 20px;
+  }
 }

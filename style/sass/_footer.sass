@@ -1,0 +1,44 @@
+.footer 
+    width: 100vw 
+    padding: 20px 0
+    +flexCenter()
+    .author 
+        width: 50%
+        text-align: center 
+        font-size: 18px
+        text-transform: none
+        +flexCenter()
+        @media (max-width: 900px)
+            width: 100%
+        a 
+            margin-left: 10px
+            text-decoration: underline
+            color: $dark
+            animation: shake 3s infinite 
+            @keyframes shake 
+                2% 
+                    transform: rotate(10deg)
+                4% 
+                    transform: rotate(-10deg)
+                6% 
+                    transform: rotate(10deg)
+                8% 
+                    transform: rotate(-10deg)
+                10% 
+                    transform: none
+                100% 
+                    transform: none
+    .socials 
+        width: 50%
+        +flexCenter()
+        font-size: 40px
+        @media (max-width: 900px)
+            font-size: 30px
+            width: 100%
+        a 
+            margin: 0 20px
+            text-decoration: none 
+            color: $dark
+            @media (max-width: 900px)
+                margin-top: 20px
+        
