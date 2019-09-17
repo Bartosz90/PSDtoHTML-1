@@ -49,8 +49,8 @@ body .mainSection {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   z-index: 10;
-  -webkit-animation: fadeOut 1s forwards 4s, disappear .1s forwards 5s;
-          animation: fadeOut 1s forwards 4s, disappear .1s forwards 5s;
+  -webkit-animation: fadeOut 1s forwards 4.5s, disappear .1s forwards 5.5s;
+          animation: fadeOut 1s forwards 4.5s, disappear .1s forwards 5.5s;
 }
 
 @-webkit-keyframes fadeOut {
@@ -98,8 +98,8 @@ body .mainSection {
 
 .preloader h1 {
   opacity: 0;
-  -webkit-animation: fadeIn 1s forwards 2.5s;
-          animation: fadeIn 1s forwards 2.5s;
+  -webkit-animation: fadeIn 1s forwards 3s;
+          animation: fadeIn 1s forwards 3s;
 }
 
 @-webkit-keyframes fadeIn {
@@ -120,8 +120,8 @@ body .mainSection {
   -webkit-transform: translate(0, -55vh);
           transform: translate(0, -55vh);
   opacity: 1;
-  -webkit-animation: fallDown 3s ease-in-out forwards;
-          animation: fallDown 3s ease-in-out forwards;
+  -webkit-animation: fallDown 3s ease-in-out 1s forwards;
+          animation: fallDown 3s ease-in-out 1s forwards;
 }
 
 @-webkit-keyframes fallDown {

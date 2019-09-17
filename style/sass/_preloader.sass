@@ -7,7 +7,7 @@
     background-color: #fff
     +flexCenter()
     z-index: 10
-    animation: fadeOut 1s forwards 4s, disappear .1s forwards 5s
+    animation: fadeOut 1s forwards 4.5s, disappear .1s forwards 5.5s
     @keyframes fadeOut 
         100% 
             opacity: 0
@@ -25,7 +25,7 @@
             font-size: 35px
     h1 
         opacity: 0
-        animation: fadeIn 1s forwards 2.5s
+        animation: fadeIn 1s forwards 3s
         @keyframes fadeIn 
             100% 
                 opacity: 1
@@ -34,7 +34,7 @@
         color: $green
         transform: translate(0, -55vh)
         opacity: 1
-        animation: fallDown 3s ease-in-out forwards
+        animation: fallDown 3s ease-in-out 1s forwards
         @keyframes fallDown 
             25% 
                 transform: translate(-30px, -45vh) rotate(-20deg)
