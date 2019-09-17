@@ -30,6 +30,138 @@ body .mainSection {
   min-height: 80vh;
 }
 
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  z-index: 10;
+  -webkit-animation: fadeOut 1s forwards 4s, disappear .1s forwards 5s;
+          animation: fadeOut 1s forwards 4s, disappear .1s forwards 5s;
+}
+
+@-webkit-keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes disappear {
+  100% {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@keyframes disappear {
+  100% {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.preloader h1, .preloader .leaf {
+  font-size: 70px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .preloader h1, .preloader .leaf {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 330px) {
+  .preloader h1, .preloader .leaf {
+    font-size: 35px;
+  }
+}
+
+.preloader h1 {
+  opacity: 0;
+  -webkit-animation: fadeIn 1s forwards 2.5s;
+          animation: fadeIn 1s forwards 2.5s;
+}
+
+@-webkit-keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+.preloader .leaf {
+  margin-right: 15px;
+  color: #65eb7b;
+  -webkit-transform: translate(0, -55vh);
+          transform: translate(0, -55vh);
+  opacity: 1;
+  -webkit-animation: fallDown 3s ease-in-out forwards;
+          animation: fallDown 3s ease-in-out forwards;
+}
+
+@-webkit-keyframes fallDown {
+  25% {
+    -webkit-transform: translate(-30px, -45vh) rotate(-20deg);
+            transform: translate(-30px, -45vh) rotate(-20deg);
+  }
+  50% {
+    -webkit-transform: translate(30px, -25vh) rotate(20deg);
+            transform: translate(30px, -25vh) rotate(20deg);
+  }
+  75% {
+    -webkit-transform: translate(-30px, -15vh) rotate(-20deg);
+            transform: translate(-30px, -15vh) rotate(-20deg);
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fallDown {
+  25% {
+    -webkit-transform: translate(-30px, -45vh) rotate(-20deg);
+            transform: translate(-30px, -45vh) rotate(-20deg);
+  }
+  50% {
+    -webkit-transform: translate(30px, -25vh) rotate(20deg);
+            transform: translate(30px, -25vh) rotate(20deg);
+  }
+  75% {
+    -webkit-transform: translate(-30px, -15vh) rotate(-20deg);
+            transform: translate(-30px, -15vh) rotate(-20deg);
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
 .header {
   width: 100vw;
   height: 80vh;

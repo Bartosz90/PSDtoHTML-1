@@ -1,0 +1,46 @@
+.preloader 
+    position: fixed 
+    top: 0
+    left: 0 
+    width: 100vw 
+    height: 100vh 
+    background-color: #fff
+    +flexCenter()
+    z-index: 10
+    animation: fadeOut 1s forwards 4s, disappear .1s forwards 5s
+    @keyframes fadeOut 
+        100% 
+            opacity: 0
+    @keyframes disappear 
+        100% 
+            display: none
+            visibility: hidden
+
+    h1, .leaf 
+        font-size: 70px
+        text-transform: uppercase
+        @media (max-width: 900px)
+            font-size: 45px
+        @media (max-width: 330px)
+            font-size: 35px
+    h1 
+        opacity: 0
+        animation: fadeIn 1s forwards 2.5s
+        @keyframes fadeIn 
+            100% 
+                opacity: 1
+    .leaf 
+        margin-right: 15px
+        color: $green
+        transform: translate(0, -55vh)
+        opacity: 1
+        animation: fallDown 3s ease-in-out forwards
+        @keyframes fallDown 
+            25% 
+                transform: translate(-30px, -45vh) rotate(-20deg)
+            50% 
+                transform: translate(30px, -25vh) rotate(20deg)
+            75% 
+                transform: translate(-30px, -15vh) rotate(-20deg)
+            100% 
+                transform: none
